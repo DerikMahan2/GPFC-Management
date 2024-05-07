@@ -1,6 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 
-namespace GPFCManagementSystem.Models
+namespace GPFC_Management.Models
 {
     public class Player
     {

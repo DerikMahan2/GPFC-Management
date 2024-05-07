@@ -1,5 +1,5 @@
 using Microsoft.EntityFrameworkCore;
-using GPFCManagementSystem.Models;
+using GPFC_Management.Models;
 using Microsoft.Extensions.DependencyInjection; // Added this to use CreateScope()
 
 var builder = WebApplication.CreateBuilder(args);

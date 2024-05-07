@@ -1,0 +1,48 @@
+@page
+@model GPFC_Management.Pages_Teams.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Team</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Team.TeamName)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Team.TeamName)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Team.CoachName)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Team.CoachName)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Team.Division)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Team.Division)
+        </dd>
+    </dl>
+</div>
+
+<div>
+    <h4>Players</h4>
+    <ul>
+        @foreach (var player in Model.Team.Players)
+        {
+            <li>@player.Name - Age: @player.Age</li>
+        }
+    </ul>
+</div>
+
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.Team.TeamId">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>

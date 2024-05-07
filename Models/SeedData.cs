@@ -3,7 +3,7 @@ using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Linq;
 
-namespace GPFCManagementSystem.Models
+namespace GPFC_Management.Models
 {
     public static class SeedData
     {

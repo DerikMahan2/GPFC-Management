@@ -1,6 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 
-namespace GPFCManagementSystem.Models
+namespace GPFC_Management.Models
 {
     public class GPFCContext : DbContext
     {
