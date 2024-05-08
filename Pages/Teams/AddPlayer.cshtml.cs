@@ -5,20 +5,20 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
-using RazorPagesMovie.Models;
+using RazorPagesGPFC.Models;
 using Microsoft.AspNetCore.Mvc.Rendering;
 
-namespace AdvModelingDemo.Pages
+namespace GPFC_Management.Pages
 {
-    public class AddReviewModel : PageModel
+    public class AddPlayerModel : PageModel
     {
-        private readonly ILogger<AddReviewModel> _logger;
-        private readonly MovieContext _context;
+        private readonly ILogger<AddPlayerModel> _logger;
+        private readonly GPFCContext _context;
         [BindProperty]
-        public Review Review {get; set;} = default!;
-        public SelectList MoviesDropDown {get; set;} = default!;
+        public Player Player {get; set;} = default!;
+        public SelectList TeamsDropDown {get; set;} = default!;
 
-        public AddReviewModel(MovieContext context, ILogger<AddReviewModel> logger)
+        public AddPlayerModel(GPFCContext context, ILogger<AddPlayerModel> logger)
         {
             _context = context;
             _logger = logger;
