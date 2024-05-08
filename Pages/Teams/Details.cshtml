@@ -1,5 +1,5 @@
 @page
-@model GPFC_Management.Pages_Teams.DetailsModel
+@model GPFC_Management.Pages.Teams.DetailsModel
 
 @{
     ViewData["Title"] = "Details";
@@ -31,17 +31,6 @@
         </dd>
     </dl>
 </div>
-
-<div>
-    <h4>Players</h4>
-    <ul>
-        @foreach (var player in Model.Team.Players)
-        {
-            <li>@player.Name - Age: @player.Age</li>
-        }
-    </ul>
-</div>
-
 <div>
     <a asp-page="./Edit" asp-route-id="@Model.Team.TeamId">Edit</a> |
     <a asp-page="./Index">Back to List</a>

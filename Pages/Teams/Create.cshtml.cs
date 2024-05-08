@@ -5,15 +5,15 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
-using GPFC_Management.Models;
+using RazorPagesGPFC.Models;
 
-namespace GPFC_Management.Pages_Teams
+namespace GPFC_Management.Pages.Teams
 {
     public class CreateModel : PageModel
     {
-        private readonly GPFC_Management.Models.GPFCContext _context;
+        private readonly RazorPagesGPFC.Models.GPFCContext _context;
 
-        public CreateModel(GPFC_Management.Models.GPFCContext context)
+        public CreateModel(RazorPagesGPFC.Models.GPFCContext context)
         {
             _context = context;
         }

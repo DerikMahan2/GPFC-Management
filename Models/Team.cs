@@ -1,18 +1,21 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
-namespace GPFC_Management.Models
+namespace RazorPagesGPFC.Models
 {
     public class Team
     {
         public int TeamId { get; set; }
 
+        [StringLength(60, MinimumLength = 3)]
         [Required]
-        public string TeamName { get; set; }
+        public string TeamName { get; set; } = string.Empty;
 
-        public string CoachName { get; set; }
+        [Required]
+        public string CoachName { get; set; } = string.Empty;
 
-        public string Division { get; set; }
+        [Required]
+        public string Division { get; set; } = string.Empty;
 
         // Navigation property
         public ICollection<Player> Players { get; set; }

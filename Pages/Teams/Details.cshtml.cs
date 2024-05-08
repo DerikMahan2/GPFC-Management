@@ -5,15 +5,15 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
-using GPFC_Management.Models;
+using RazorPagesGPFC.Models;
 
-namespace GPFC_Management.Pages_Teams
+namespace GPFC_Management.Pages.Teams
 {
     public class DetailsModel : PageModel
     {
-        private readonly GPFC_Management.Models.GPFCContext _context;
+        private readonly RazorPagesGPFC.Models.GPFCContext _context;
 
-        public DetailsModel(GPFC_Management.Models.GPFCContext context)
+        public DetailsModel(RazorPagesGPFC.Models.GPFCContext context)
         {
             _context = context;
         }
@@ -27,7 +27,7 @@ namespace GPFC_Management.Pages_Teams
                 return NotFound();
             }
 
-            var team = await _context.Teams.Include(t => t.Players).FirstOrDefaultAsync(m => m.TeamId == id);
+            var team = await _context.Teams.FirstOrDefaultAsync(m => m.TeamId == id);
             if (team == null)
             {
                 return NotFound();

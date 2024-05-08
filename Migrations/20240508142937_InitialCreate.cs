@@ -16,7 +16,7 @@ namespace GPFC_Management.Migrations
                 {
                     TeamId = table.Column<int>(type: "INTEGER", nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
-                    TeamName = table.Column<string>(type: "TEXT", nullable: false),
+                    TeamName = table.Column<string>(type: "TEXT", maxLength: 60, nullable: false),
                     CoachName = table.Column<string>(type: "TEXT", nullable: false),
                     Division = table.Column<string>(type: "TEXT", nullable: false)
                 },
@@ -31,7 +31,7 @@ namespace GPFC_Management.Migrations
                 {
                     PlayerId = table.Column<int>(type: "INTEGER", nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
-                    Name = table.Column<string>(type: "TEXT", nullable: false),
+                    Name = table.Column<string>(type: "TEXT", maxLength: 60, nullable: false),
                     Age = table.Column<int>(type: "INTEGER", nullable: false),
                     TeamId = table.Column<int>(type: "INTEGER", nullable: false)
                 },

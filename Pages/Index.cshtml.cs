@@ -1,8 +1,8 @@
-using GPFC_Management.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using System.Linq;
+using RazorPagesGPFC.Models;
 
 namespace GPFC_Management.Pages;
 

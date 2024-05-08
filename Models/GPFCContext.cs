@@ -1,6 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 
-namespace GPFC_Management.Models
+namespace RazorPagesGPFC.Models
 {
     public class GPFCContext : DbContext
     {
