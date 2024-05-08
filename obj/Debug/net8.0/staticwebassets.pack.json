@@ -13,6 +13,10 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\Users\\Derik\\OneDrive\\Desktop\\School\\WT\\CDIM 3312\\GPFC-Management\\wwwroot\\images\\logo.png",
+      "PackagePath": "staticwebassets\\images\\logo.png"
+    },
+    {
       "Id": "C:\\Users\\Derik\\OneDrive\\Desktop\\School\\WT\\CDIM 3312\\GPFC-Management\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },

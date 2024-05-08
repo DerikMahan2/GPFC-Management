@@ -16,8 +16,5 @@ namespace RazorPagesGPFC.Models
 
         [Required]
         public string Division { get; set; } = string.Empty;
-
-        // Navigation property
-        public ICollection<Player> Players { get; set; }
     }
 }
