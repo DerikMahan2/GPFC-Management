@@ -26,7 +26,7 @@ namespace GPFC_Management.Pages
 
         public void OnGet()
         {
-            MoviesDropDown = new SelectList(_context.Movies.ToList(), "MovieId", "Title");
+            TeamsDropDown = new SelectList(_context.Teams.ToList(), "TeamId", "TeamName");
         }
 
         public IActionResult OnPost()
@@ -36,7 +36,7 @@ namespace GPFC_Management.Pages
                 return Page();
             }
 
-            _context.Reviews.Add(Review);
+            _context.Players.Add(Player);
             _context.SaveChanges();
 
             return RedirectToPage("./Index");
