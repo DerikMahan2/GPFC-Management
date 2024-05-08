@@ -16,5 +16,6 @@ namespace RazorPagesGPFC.Models
 
         [Required]
         public string Division { get; set; } = string.Empty;
+        public List<Player> Players { get; set; } = new List<Player>();
     }
 }

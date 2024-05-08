@@ -37,7 +37,8 @@ namespace RazorPagesGPFC.Models
                 context.Teams.AddRange(teams);
                 context.SaveChanges();
 
-                context.Players.AddRange(
+                var players = new[]
+                {
                     // U10 Boys Team A Players
                     new Player { Name = "Ethan Martinez", TeamId = teams[0].TeamId, Age = 8 },
                     new Player { Name = "Noah Smith", TeamId = teams[0].TeamId, Age = 9 },
@@ -140,7 +141,8 @@ namespace RazorPagesGPFC.Models
                     new Player { Name = "Olivia Clark", TeamId = teams[7].TeamId, Age = 10 },
                     new Player { Name = "Ava Lewis", TeamId = teams[7].TeamId, Age = 11 },
                     new Player { Name = "Mia Nelson", TeamId = teams[7].TeamId, Age = 10 }
-                );
+                };
+                context.Players.AddRange(players);
                 context.SaveChanges();
             }
         }
