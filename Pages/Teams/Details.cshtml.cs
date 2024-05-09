@@ -20,6 +20,7 @@ namespace GPFC_Management.Pages.Teams
 
         public Team Team { get; set; } = default!;
 
+        [BindProperty]
         public int PlayerIdToDelete { get; set; }
 
         public async Task<IActionResult> OnGetAsync(int? id)
@@ -48,15 +49,15 @@ namespace GPFC_Management.Pages.Teams
                 return Page();
             }
 
-            var Course = _context.Players.FirstOrDefault(c => c.PlayerId == PlayerIdToDelete);
+            var Player = _context.Players.FirstOrDefault(p => p.PlayerId == PlayerIdToDelete);
 
-            if (Course != null)
+            if (Player != null)
             {
-                _context.Remove(Course);
+                _context.Remove(Player); // Remove the player
                 _context.SaveChanges();
             }
 
-            Team = _context.Teams.Include(p => p.Players).First(p => p.TeamId == id);
+            Team = _context.Teams.Include(t => t.Players).First(t => t.TeamId == id);
 
             return Page();
         }

@@ -26,17 +26,17 @@ namespace GPFC_Management.Pages.Teams
             _logger = logger;
         }
 
-        // Drop down list of all the Courses
+        // Drop down list of all the Players
         public SelectList players { get; set; } = default!;
 
-        // CourseId to delete. We bind this property because the user will select it in our form and submit it.
+        // PlayerId to delete. We bind this property because the user will select it in our form and submit it.
         [BindProperty]
         [Display(Name = "Player")]
         public int? PlayerId { get; set; }
 
         public IActionResult OnGet(int? id)
         {
-            // Get all the reviews to populate our SelectList drop down
+            // Get all the Players to populate our SelectList drop down
             var teamsWithPlayers = _context.Players.Include(c => c.Team).Select(c => new
             {
                 ID = c.PlayerId,
@@ -57,12 +57,12 @@ namespace GPFC_Management.Pages.Teams
             {
                 return NotFound();
             }
-            // Find the review in the database
+            // Find the player in the database
             Player c = _context.Players.Find(PlayerId)!;
 
             if (c != null)
             {
-                _context.Players.Remove(c); // Delete the review
+                _context.Players.Remove(c); // Delete the player
                 _context.SaveChanges();
             }
 
