@@ -15,8 +15,8 @@ namespace GPFC_Management.Pages
         private readonly ILogger<AddPlayerModel> _logger;
         private readonly GPFCContext _context;
         [BindProperty]
-        public Player Player {get; set;} = default!;
-        public SelectList TeamsDropDown {get; set;} = default!;
+        public Player Player { get; set; } = default!;
+        public SelectList TeamsDropDown { get; set; } = default!;
 
         public AddPlayerModel(GPFCContext context, ILogger<AddPlayerModel> logger)
         {
