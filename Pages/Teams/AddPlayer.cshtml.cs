@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using RazorPagesGPFC.Models;
 using Microsoft.AspNetCore.Mvc.Rendering;
 
-namespace GPFC_Management.Pages
+namespace GPFC_Management.Pages.Teams
 {
     public class AddPlayerModel : PageModel
     {

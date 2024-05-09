@@ -7,25 +7,25 @@
 
 <h1>Create</h1>
 
-<h4>Review</h4>
+<h4>Player</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
         <form method="post">
             <div class="form-group">
-                <label asp-for="Player.TeamId" class="control-label"></label>
-                <select asp-for="Player.PlayerId" asp-items="Model.TeamsDropDown" class="form-control">
+                <label asp-for="Player.TeamId" class="control-label">Team</label>
+                <select asp-for="Player.TeamId" asp-items="Model.TeamsDropDown" class="form-control">
                     <option value="">--Select Team--</option>
                 </select>
                 <span asp-validation-for="Player.TeamId" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Player.Name" class="control-label"></label>
+                <label asp-for="Player.Name" class="control-label">Name</label>
                 <input asp-for="Player.Name" class="form-control" />
                 <span asp-validation-for="Player.Name" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Player.Age" class="control-label"></label>
+                <label asp-for="Player.Age" class="control-label">Age</label>
                 <input asp-for="Player.Age" class="form-control" />
                 <span asp-validation-for="Player.Age" class="text-danger"></span>
             </div>
@@ -37,7 +37,7 @@
 </div>
 
 <div>
-    <a asp-page="Index">Back to Teams</a>
+    <a asp-page="/Teams/Index">Back to Teams</a>
 </div>
 
 @section Scripts {
