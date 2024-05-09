@@ -10,7 +10,7 @@ using RazorPagesGPFC.Models;
 namespace GPFC_Management.Migrations
 {
     [DbContext(typeof(GPFCContext))]
-    [Migration("20240509140002_InitialCreate")]
+    [Migration("20240509141358_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />
