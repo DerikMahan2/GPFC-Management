@@ -43,4 +43,4 @@ The ERD for the system includes entities such as Team, Player, and Match with re
 - **User Interface**: Scaffold basic CRUD operations for Teams and Players. Extend as project scope allows.
 
 ## Entity-Relationship Diagram (ERD)
-![ER Diagram](./Images/Final Project.png)
+![ER Diagram](./Images/ERD.png)
