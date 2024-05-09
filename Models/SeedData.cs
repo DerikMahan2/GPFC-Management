@@ -144,6 +144,18 @@ namespace RazorPagesGPFC.Models
                 };
                 context.Players.AddRange(players);
                 context.SaveChanges();
+
+                var matches = new[]
+                {
+                    // U10 Matches
+                    new Match { MatchId = 1, HomeTeamId = 1, AwayTeamId = 2, MatchTime = DateTime.Parse("2024-04-12 14:00") },
+                    new Match { MatchId = 2, HomeTeamId = 3, AwayTeamId = 4, MatchTime = DateTime.Parse("2024-04-19 16:00") },
+                    // U12 Matches
+                    new Match { MatchId = 3, HomeTeamId = 5, AwayTeamId = 7, MatchTime = DateTime.Parse("2024-04-26 14:00") },
+                    new Match { MatchId = 4, HomeTeamId = 6, AwayTeamId = 8, MatchTime = DateTime.Parse("2024-05-03 16:00") }
+                };
+                context.Matches.AddRange(matches);
+                context.SaveChanges();
             }
         }
     }
