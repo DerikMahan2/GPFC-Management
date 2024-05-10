@@ -4,14 +4,24 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace RazorPagesGPFC.Models
 {
     public class Match
-    {
-        public int MatchId { get; set; }
-        public int HomeTeamId { get; set; }
-        public int AwayTeamId { get; set; }
-        public DateTime MatchTime { get; set; }
+{
+    public int MatchId { get; set; }
 
-        public Team HomeTeam { get; set; }
-        public Team AwayTeam { get; set; }
-    }
+    [Required(ErrorMessage = "Home team is required.")]
+    public int HomeTeamId { get; set; }
+
+    [Required(ErrorMessage = "Away team is required.")]
+    public int AwayTeamId { get; set; }
+
+    [Required]
+    public DateTime MatchTime { get; set; }
+
+    [ForeignKey("HomeTeamId")]
+    public Team ?HomeTeam { get; set; }
+
+    [ForeignKey("AwayTeamId")]
+    public Team ?AwayTeam { get; set; }
+}
+
 
 }

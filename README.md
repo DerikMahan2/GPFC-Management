@@ -1,6 +1,6 @@
 # GPFC Management System
 
-## Derik Mahan - CIDM 3312
+## Derik Mahan - CIDM 3312 (Done)
 
 ## Project Overview
 The **GPFC Management System** is designed for the Gregory Portland Futbal Club to efficiently manage teams, players, and matches. Built using ASP.NET Core and Entity Framework Core, this application supports essential functionalities such as match scheduling, team management, and player registration.
