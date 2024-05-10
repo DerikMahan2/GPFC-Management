@@ -1,3 +1,6 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
@@ -15,7 +18,7 @@ namespace GPFC_Management.Pages.Matches
             _context = context;
         }
 
-        public Match Match { get; set; }
+        public Match Match { get; set; } = default!;
 
         public async Task<IActionResult> OnGetAsync(int? id)
         {
@@ -24,16 +27,15 @@ namespace GPFC_Management.Pages.Matches
                 return NotFound();
             }
 
-            Match = await _context.Matches
-                .Include(m => m.HomeTeam)
-                .Include(m => m.AwayTeam)
-                .FirstOrDefaultAsync(m => m.MatchId == id);
-
-            if (Match == null)
+            var match = await _context.Matches.FirstOrDefaultAsync(m => m.MatchId == id);
+            if (match == null)
             {
                 return NotFound();
             }
-
+            else
+            {
+                Match = match;
+            }
             return Page();
         }
     }
